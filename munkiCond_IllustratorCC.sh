@@ -22,17 +22,17 @@ IllustratorCC2017="/Applications/Adobe Illustrator CC 2017/Adobe Illustrator CC 
 IllustratorCC2018="/Applications/Adobe Illustrator CC 2018/Adobe Illustrator CC 2018.app"
 IllustratorCC2019="/Applications/Adobe Illustrator CC 2019/Adobe Illustrator CC 2019.app"
 
-IllustratorList= ( "${IllustratorCC2017}" "${IllustratorCC2018}" "${IllustratorCC2019}")
+IllustratorList=( "${IllustratorCC2017}" "${IllustratorCC2018}" "${IllustratorCC2019}" )
 
 for Illustrator in "${IllustratorList[@]}" ; do
  if [[ -d "${Illustrator}" ]] ; then 
-  if [[ "${Illustrator}" =~ "2017"]] ; then
+  if [[ "${Illustrator}" =~ "2017" ]] ; then
    ## write munki condition Illustrator CC2017 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "IllustratorCC2017" TRUE
-  elif [[ "${Illustrator}" =~ "2018"]] ; then
+  elif [[ "${Illustrator}" =~ "2018" ]] ; then
    ## write munki condition Illustrator CC2018 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "IllustratorCC2018" TRUE
-  elif [[ "${Illustrator}" =~ "2019"]] ; then
+  elif [[ "${Illustrator}" =~ "2019" ]] ; then
    ## write munki condition Illustrator CC2019 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "IllustratorCC2019" TRUE
   fi

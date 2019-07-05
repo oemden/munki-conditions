@@ -22,17 +22,17 @@ PhotoshopCC2017="/Applications/Adobe Photoshop CC 2017/Adobe Photoshop CC 2017.a
 PhotoshopCC2018="/Applications/Adobe Photoshop CC 2018/Adobe Photoshop CC 2018.app"
 PhotoshopCC2019="/Applications/Adobe Photoshop CC 2019/Adobe Photoshop CC 2019.app"
 
-PhotoshopList= ( "${PhotoshopCC2017}" "${PhotoshopCC2018}" "${PhotoshopCC2019}")
+PhotoshopList=( "${PhotoshopCC2017}" "${PhotoshopCC2018}" "${PhotoshopCC2019}" )
 
 for Photoshop in "${PhotoshopList[@]}" ; do
  if [[ -d "${Photoshop}" ]] ; then 
-  if [[ "${Photoshop}" =~ "2017"]] ; then
+  if [[ "${Photoshop}" =~ "2017" ]] ; then
    ## write munki condition Photoshop CC2017 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "PhotoshopCC2017" TRUE
-  elif [[ "${Photoshop}" =~ "2018"]] ; then
+  elif [[ "${Photoshop}" =~ "2018" ]] ; then
    ## write munki condition Photoshop CC2018 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "PhotoshopCC2018" TRUE
-  elif [[ "${Photoshop}" =~ "2019"]] ; then
+  elif [[ "${Photoshop}" =~ "2019" ]] ; then
    ## write munki condition Photoshop CC2019 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "PhotoshopCC2019" TRUE
   fi

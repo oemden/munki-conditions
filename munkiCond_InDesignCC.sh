@@ -22,17 +22,17 @@ inDesignCC2017="/Applications/Adobe InDesign CC 2017/Adobe InDesign CC 2017.app"
 inDesignCC2018="/Applications/Adobe InDesign CC 2018/Adobe InDesign CC 2018.app"
 inDesignCC2019="/Applications/Adobe InDesign CC 2019/Adobe InDesign CC 2019.app"
 
-inDesignList= ( "${inDesignCC2017}" "${inDesignCC2018}" "${inDesignCC2019}")
+inDesignList=( "${inDesignCC2017}" "${inDesignCC2018}" "${inDesignCC2019}" )
 
 for inDesign in "${inDesignList[@]}" ; do
  if [[ -d "${inDesign}" ]] ; then 
-  if [[ "${inDesign}" =~ "2017"]] ; then
+  if [[ "${inDesign}" =~ "2017" ]] ; then
    ## write munki condition indesign CC2017 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "inDesignCC2017" TRUE
-  elif [[ "${inDesign}" =~ "2018"]] ; then
+  elif [[ "${inDesign}" =~ "2018" ]] ; then
    ## write munki condition indesign CC2018 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "inDesignCC2018" TRUE
-  elif [[ "${inDesign}" =~ "2019"]] ; then
+  elif [[ "${inDesign}" =~ "2019" ]] ; then
    ## write munki condition indesign CC2019 exists
    "${DEFAULTS}" write "${COND_DOMAIN}" "inDesignCC2019" TRUE
   fi
